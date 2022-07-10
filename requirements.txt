@@ -1,1 +1,2 @@
-black
+black==22.6.0
+pip-check-updates==0.17.0
