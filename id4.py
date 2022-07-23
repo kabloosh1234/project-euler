@@ -1,4 +1,5 @@
 # Largest palindrome product
+
 palindromes = []
 products = []
 
