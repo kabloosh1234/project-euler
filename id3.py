@@ -1,5 +1,14 @@
+# Largest prime factor
+
 import math
 
+from primePy import primes
+
+# Solution 1
+prime = primes.factors(600851475143)
+print(prime[-1])
+
+# Solution 2
 def prime_factors(num):
 
     while num % 2 == 0:
