@@ -10,5 +10,6 @@ def is_prime(n):
 while len(primes) != 2000000 :
     if is_prime(num) == True:
         primes.append(num)
+        print(num, len(primes)+1)
     num = num + 1
 print(sum(primes))
