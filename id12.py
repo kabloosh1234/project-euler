@@ -1,17 +1,14 @@
-# Highly Divisible Triangular Number
-from math import sqrt
+from goofyAh import factors
+facts = []
+cont = 100000
+temp = 0
+while len(facts) != 500:
+    for i in range(1, cont+1):
+        temp += i
 
-
-def findtri(n):
-    triangulars = []
-    l = []
-    b = []
-    for i in range(n + 1):
-        for o in range(i + 1):
-            l.append(o)
-        triangulars.append(sum(l))
-        l.clear()
-    print(triangulars)
-
-
-findtri(10)
+    if len(factors(temp)) == 500:
+        facts.append(facts)
+        break
+    print(temp)
+    cont += 1
+print("the number:", temp)
