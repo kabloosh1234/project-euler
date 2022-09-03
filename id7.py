@@ -1,5 +1,7 @@
 # 10001st prime
 
+
+# Solution 1
 num = 2
 primes = []
 
@@ -16,3 +18,10 @@ while len(primes) != 10001:
         primes.append(num)
     num = num + 1
 print(primes[10000])
+
+
+# Solution 2
+from primePy import primes
+
+a = primes.first(10001)
+print(a)
