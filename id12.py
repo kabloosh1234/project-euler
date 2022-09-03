@@ -1,6 +1,6 @@
 from goofyAh import factors
 facts = []
-cont = 100
+cont = 100000
 temp = 0
 while len(facts) != 500:
     for i in range(1, cont+1):
