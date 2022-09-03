@@ -1,5 +1,6 @@
 # Smallest multiple
 
+
 # Solution 1
 from collections import Counter
 from primePy import primes
@@ -17,11 +18,9 @@ def find_primes(n):
 factors = Counter()
 for i in range(2, 21):
     _factors = find_primes(i)
-    print(i, _factors)
     for p in _factors:
         factors[p] = max(_factors[p], factors[p])
 
-print(factors)
 ans = 1
 for p in factors:
     ans *= p ** factors[p]
@@ -30,11 +29,30 @@ print(ans)
 
 
 # Solution 2
-j = 0
 num = 200000000
-for i in range(10000000000):
-    if num%3 == 0 and num%4 == 0 and num%5 == 0 and num%6 == 0 and num%7 == 0 and num%8 == 0 and num%9 == 0 and num%10 == 0 and num%11 == 0 and num%12 == 0 and num%13 == 0 and num%14 == 0 and num%15 == 0 and num%16 == 0 and num%17 == 0 and num%18 == 0 and num%19 == 0 and num%20 == 0 :
-        j = 1
-    if j  == 1:
+while True:
+    j = 1
+    for k in range(2, 21):
+        if num % k:
+            j = 0
             break
-    num +=1
+    if j == 1:
+        print(num)
+        break
+    num += 1
+
+
+
+# Solution 3
+import math
+
+a = 0
+multiples = []
+for o in range(1, round(math.sqrt(math.factorial(20)))):
+    for i in range(1, 21):
+        b = math.factorial(20) / o
+        if b % i == 0:
+            a = i
+            if a == 20:
+                multiples.append(b)
+print(multiples)
